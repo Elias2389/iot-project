@@ -1,17 +1,17 @@
 version: '3.3'
 
 services:
-  postgres:
+  postgres_iot:
     image: postgres:13
     environment:
-      - POSTGRES_DB=my_db
+      - POSTGRES_DB=iot_db
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=123456
     ports:
       - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
-  pgadmin:
+  pgadmin_iot:
     image: dpage/pgadmin4
     environment:
       - PGADMIN_DEFAULT_EMAIL=root@admin.com
